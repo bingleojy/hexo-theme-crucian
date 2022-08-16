@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang"="<%- config.language %>">
+  <head>
+    
+    <%- partial('_partial/meta') %>
+
+    <title><%- config.title %></title>
+
+    <%- partial('_partial/top-link') %>
+
+    <%- partial('_partial/styles') %>
+    
+  </head>
+  
+  <body>
+    <div class="col-lg-8 mx-auto p-3 py-md-5">
+
+      <%- partial('_partial/header') %>
+
+      <main>
+	<div class="row">
+	  
+	  <div class="col-md-1 ">
+
+	  </div>
+
+	  <div class="col-md-8">
+	    
+	    <br>
+
+	    <%- partial('_partial/search') %>
+
+	    <%- body %>
+	    
+	    <br>
+	
+	  </div>
+	  
+	  <div class="col-md-3">
+
+	    <%- partial('_partial/sidebar-left') %>
+	    
+	  </div>
+	  
+	</div>
+      </main>
+      <div class="row sticky-bottom ">
+	<%- partial('_partial/footer') %>
+      </div>
+    </div>
+
+
+    <%- partial('_partial/after-link') %>
+
+  </body>
+</html>

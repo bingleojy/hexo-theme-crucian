@@ -1,0 +1,41 @@
+{
+  "name": "hexo-theme-crucian",
+  "version": "0.0.1",
+  "description": "Elegant and powerful theme for Hexo.",
+  "main": "package.json",
+  "files": [
+    "docs",
+    "languages",
+    "layout",
+    "scripts",
+    "source",
+    "test",
+    "_config.yml"
+  ],
+  "scripts": {
+    "eslint": "eslint scripts/ source/js test/",
+    "prepare": "node .githooks/install.js",
+    "stylint": "stylint source/css/",
+    "test": "mocha test/index.js",
+    "test-cov": "nyc npm test"
+  },
+  "repository": "binglinli/hexo-theme-crucian",
+  "keywords": [
+    "hexo",
+    "theme",
+    "fish"
+  ],
+  "author": "Binglin Li (https://binglinli.github.io)",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/binglinli/hexo-theme-crucian/issues"
+  },
+  "homepage": "https://binglinli.github.io/crucian",
+  "devDependencies": {
+    "eslint": "8.16.0",
+    "hexo": "6.2.0",
+    "hexo-renderer-marked": "5.0.0",
+    "js-yaml": "4.1.0",
+    "stylint": "2.0.0"
+  }
+}

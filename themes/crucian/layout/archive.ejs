@@ -1,0 +1,80 @@
+<!-- 归档 -->
+<%
+var title = '';
+var posts = site.posts;
+if (page.category) {
+  title = page.category;
+  posts = page.posts;
+}
+
+if (page.tag) {
+  title = page.tag;
+  posts = page.posts;
+}
+
+if (page.archive){
+  if (page.year) title = page.year + (page.month ? '/' + page.month : '');
+  else {
+    title = __('archive_a');
+    posts = site.posts;
+  }
+}
+var year, month;
+var last_year = 1970;
+var is_first_year = 1;
+%>
+
+<div class="container">
+  <div class="row">
+  <% posts.sort('date', -1).each(function(item){ %>
+    <%
+    year = item.date.toDate().getFullYear();
+    month = item.date.toDate().getMonth();	   
+    %>
+    
+    <% if (year != last_year){ %>
+      <% if (!is_first_year) { %>
+        
+      <% } %>
+      
+      <% is_first_year = 0 %>
+
+      <!-- 年份分类  -->
+      <div class="border-bottom">
+	<br>
+	<span class=""><%= year %></span><br>
+	<br>
+      </div>
+      
+      <% last_year = year; %>
+      
+    <% } %>
+    <div class="col-sm-3">
+      <br>
+      <i class="bi bi-calendar-check"></i>
+      <span class="shadow-sm">&nbsp;&nbsp;<%= item.date.format("MM-DD") %>&nbsp;&nbsp;</span>
+    </div>
+    
+      <% if (item.link){ %>
+	<% if (item.title){ %>
+
+	  <a href="<%- item.link %>"<% if (item.description) { %>title="<%= item.description %>"<% } %>><%= item.title %>
+	  </a>
+
+	<% } else { %>
+
+	  <a href="<%- item.link %>"
+	     <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.link %></a>
+
+	<% } %>
+      <% } else { %>
+	<div class="col-sm-9">
+	  <br>
+	  <i class="bi bi-pen"></i>
+	  <a class="badge opacity-75 shadow-sm"  href="<%- config.root %><%- item.path %>"
+	     <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a>
+	</div>
+      <% } %>
+  <% }); %>
+  </div>
+</div>	

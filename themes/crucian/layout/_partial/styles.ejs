@@ -1,30 +1,53 @@
 <!-- Content styles -->
 <style>
- 
- @font-face {
-   font-family:HarmonyOS_Sans_SC_Medium;font-style: normal;font-display: swap;
-   src: url('/fonts/HarmonyOS_Sans_SC_Medium.woff2') format('woff2'),
-   url('/fonts/HarmonyOS_Sans_SC_Medium.woff') format('woff');
- }
- 
- *{
-   font-family:HarmonyOS_Sans_SC_Medium;
- }
- 
- html{
-   font-size: 11px;
- }
- 
 
- body {
-   background-color: #f0fcff;
-   color: #161823;
-   padding-top: 4.5rem;
+ *{
    margin: 0;
+   padding: 0;
+   font-family: 'Roboto', sans-serif;
+ }
+ 
+ body {
+   color: #202013;
+   font-weight: 350;
+   line-height: 1.628;
+   letter-spacing: -.003em;
+   font-size: 16px;
+   padding: 70px;
+   background-image: url("/img/bg-00.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   min-width: 100%; 
+   min-height: 100vh;
+ }
+
+ $utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    )
+  )
+)
+
+ .div-col-md-bg{
+   background-image: url("/img/content-bg-01.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
+ .div-col-md-8{
+   background-image: url("/img/content-bg-01.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
  }
  
 
  .rwd-small-font-color{
+   font-family: 'Open Sans Condensed', sans-serif;
    font-size: 5px;
    color: #adb5bd
  }
@@ -77,6 +100,7 @@ a:active {
 
 <!-- Custom styles for this template -->
 <link href="<%- url_for('/css/style.css')%>" rel="stylesheet">
+<link href="https://fonts.font.im/css?family=Open+Sans+Condensed:300|Roboto" rel="stylesheet">
 
 <script>
 

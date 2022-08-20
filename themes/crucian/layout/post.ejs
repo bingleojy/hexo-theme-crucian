@@ -1,23 +1,24 @@
+<div class="">
+  <figure  class="row text-center blockquote">
+    <h2><%- page.title %></h2>
+    <blockquote class="blockquote-footer">
+      <span>
+	<i class="bi bi-calendar-heart"></i>
+	<%- full_date(page.date,'MMMM Do YYYY') %>
+      </span>&emsp;
+      <span>
+	<i class="bi bi-vector-pen"></i>
+	<a href="<%- config.root %><%= page.path %>"><%= page.author %></a>
+      </span>
+    </blockquote>
+  </figure>
 
-<figure  class="row text-center blockquote">
-  <h2><%- page.title %></h2>
-  <blockquote class="blockquote-footer">
-    <span>
-      <i class="bi bi-calendar-heart"></i>
-      <%- full_date(page.date,'MMMM Do YYYY') %>
-    </span>&emsp;
-    <span>
-      <i class="bi bi-vector-pen"></i>
-      <a href="<%- config.root %><%= page.path %>"><%= page.author %></a>
-    </span>
-  </blockquote>
-</figure>
+  <br>
+  <span>
+    <%- page.content%>
+  </span>
 
-<br>
-<span>
-  <%- page.content%>
-</span>
-
-<div class="copyright text-center">
-  <%- partial('_partial/copyright') %>
+  <div class="copyright text-center">
+    <%- partial('_partial/copyright') %>
+  </div>
 </div>

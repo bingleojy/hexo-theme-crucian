@@ -1,12 +1,12 @@
 ---
-title: 'Investor: 投资者的段位'
+title: '投资者: 拥有财富的段位'
 author: Binglin Li
 date: 2022-07-01 17:28:39
 toc: true
 tags: 
-- Investor
+- 投资者
 categories:
-- Investor
+- 投资者
 ---
 
 ## 投资者的段位

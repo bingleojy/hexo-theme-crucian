@@ -4,7 +4,7 @@ author: Binglin Li
 date: 2022-08-01 00:58:03
 toc: true
 categories:
-- Javascript
+- JavaScript
 tags:
 - JSDoc
 - JavaScript

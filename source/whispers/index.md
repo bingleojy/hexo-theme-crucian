@@ -10,7 +10,8 @@ tags:
 layout: whispers
 ---
 
-
+##### 2022/08/20  21:22
+增加诗词歌赋栏目，以后可以记录这方面的信息
 
 ##### 2022/08/20
 修改网站字体为Roboto、Open Sans Condensed

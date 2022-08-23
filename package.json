@@ -27,7 +27,7 @@
     "hexo-renderer-markdown-it": "^6.0.1",
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
-    "hexo-toc": "^0.0.3",
+    "hexo-toc": "^1.1.0",
     "hexo-wordcount": "^6.0.1"
   },
   "description": "这里是我的个人博客站点",

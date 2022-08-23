@@ -1,4 +1,4 @@
-<div class="container div-col-md-bg">
+<div class="container div-col-md-bg card p-3">
   <% site.categories.sort('name').each(function(item){ %>
     <div >
       <h4> <%= item.name %></h4>
@@ -6,7 +6,7 @@
       <% site.posts.sort('date', -1).forEach(function(it){ %>
 	<% if (it.categories.length == 1 && it.categories.data[0]._id == item._id){ %>
 	  &emsp;&emsp;&emsp;&emsp;<i class="bi bi-arrow-bar-right"></i>
-	  <a class="badge opacity-75 shadow-sm"
+	  <a class="badge"
 	     href="<%= config.root %><%= it.path %>" <% if (it.description) { %>
 	     title="<%= it.description %>" <% } %>>
 	    <%= it.title %>

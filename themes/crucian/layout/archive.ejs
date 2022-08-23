@@ -24,37 +24,37 @@ var last_year = 1970;
 var is_first_year = 1;
 %>
 
-<div class="container div-col-md-bg">
+<div class="container div-col-md-bg p-3">
   <div class="row">
-  <% posts.sort('date', -1).each(function(item){ %>
-    <%
-    year = item.date.toDate().getFullYear();
-    month = item.date.toDate().getMonth();	   
-    %>
-    
-    <% if (year != last_year){ %>
-      <% if (!is_first_year) { %>
-        
-      <% } %>
+    <% posts.sort('date', -1).each(function(item){ %>
+      <%
+      year = item.date.toDate().getFullYear();
+      month = item.date.toDate().getMonth();	   
+      %>
       
-      <% is_first_year = 0 %>
+      <% if (year != last_year){ %>
+	<% if (!is_first_year) { %>
+          
+	<% } %>
+	
+	<% is_first_year = 0 %>
 
-      <!-- 年份分类  -->
-      <div class="border-bottom">
+	<!-- 年份分类  -->
+	<div class="border-bottom">
+	  <br>
+	  <span class=""><%= year %></span><br>
+	  <br>
+	</div>
+	
+	<% last_year = year; %>
+	
+      <% } %>
+      <div class="col-sm-3">
 	<br>
-	<span class=""><%= year %></span><br>
-	<br>
+	<i class="bi bi-calendar-check"></i>
+	<span class="">&nbsp;&nbsp;<%= item.date.format("MM-DD") %>&nbsp;&nbsp;</span>
       </div>
       
-      <% last_year = year; %>
-      
-    <% } %>
-    <div class="col-sm-3">
-      <br>
-      <i class="bi bi-calendar-check"></i>
-      <span class="shadow-sm">&nbsp;&nbsp;<%= item.date.format("MM-DD") %>&nbsp;&nbsp;</span>
-    </div>
-    
       <% if (item.link){ %>
 	<% if (item.title){ %>
 
@@ -71,10 +71,19 @@ var is_first_year = 1;
 	<div class="col-sm-9">
 	  <br>
 	  <i class="bi bi-pen"></i>
-	  <a class="badge opacity-75 shadow-sm"  href="<%- config.root %><%- item.path %>"
+	  <a class=""  href="<%- config.root %><%- item.path %>"
 	     <% if (item.description) { %> title="<%= item.description %>" <% } %>><%= item.title %></a>
 	</div>
       <% } %>
-  <% }); %>
+      
+    <% }); %>
+
+    <div class="row">
+      <% if (site.posts && site.posts.length > 1) { %>
+	<%- partial('_partial/paginator') %>
+      <% } %>
+    </div>
+    
   </div>
+  
 </div>	

@@ -1,0 +1,15 @@
+
+<div class="p-3">
+
+  <ul class="nav flex-column">
+    <!-- 菜单列表  -->
+    <% for (name in theme.menu) { %>
+      <li class="nav-item btn btn-sm">
+	<a href="<%- url_for(theme.menu[name]) %>"
+	   class="nav-link">
+	  <%= name %>
+	</a>
+      </li>
+    <% } %>
+  </ul>
+</div>

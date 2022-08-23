@@ -1,5 +1,5 @@
 ---
-title: 'JSDoc: 是一个根据 JavaScript 文件中的注释信息，生成 JavaScript 应用程序或库、模块的API文档的工具'
+title: 'JSDoc: 是根据 JavaScript 文件中的注释信息，生成应用程序或库、模块的API文档的工具'
 author: Binglin Li
 date: 2022-08-01 00:58:03
 toc: true

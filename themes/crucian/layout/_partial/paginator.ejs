@@ -1,9 +1,9 @@
 
-<nav class="pagination d-flex justify-content-between" aria-label="Page navigation">
+<nav class="pagination d-flex justify-content-middle" aria-label="Page navigation">
 
     <% if (page.prev || page.next) { %>
 
-      <div class="d-flex justify-content-start">
+      <div class="p-3">
 	<% if (page.prev){ %>
 	  <a href="<%- config.root %><%- page.prev_link %>" class="btn btn-outline-secondary">
 	    <%= __('上一页') %>
@@ -13,7 +13,7 @@
 	<% } %>
       </div>
 
-      <div class="d-flex justify-content-end">
+      <div class="p-3">
 	<% if (page.next){ %>
 	  <a href="<%- config.root %><%- page.next_link %>"
 	     class="btn btn-outline-secondary"><%= __('下一页') %>

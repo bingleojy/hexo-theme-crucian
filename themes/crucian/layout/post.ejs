@@ -1,24 +1,28 @@
-<div class="">
-  <figure  class="row text-center blockquote">
-    <h2><%- page.title %></h2>
-    <blockquote class="blockquote-footer">
-      <span>
+<div class="p-3 py-md-5">
+  
+  <div  class="container">
+    
+    <h4><%- page.title %></h4>
+
+    <div class="row">
+      
+      <div class="col">
 	<i class="bi bi-calendar-heart"></i>
 	<%- full_date(page.date,'MMMM Do YYYY') %>
-      </span>&emsp;
-      <span>
+      </div>
+      
+      <div class="col">
 	<i class="bi bi-vector-pen"></i>
 	<a href="<%- config.root %><%= page.path %>"><%= page.author %></a>
-      </span>
-    </blockquote>
-  </figure>
+      </div>
+      
+    </div>
+    
+  </div>
 
   <br>
   <span>
     <%- page.content%>
   </span>
-
-  <div class="copyright text-center">
-    <%- partial('_partial/copyright') %>
-  </div>
+  
 </div>

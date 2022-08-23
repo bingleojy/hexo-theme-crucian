@@ -1,11 +1,2 @@
-<ul class="nav nav-pills">
-  <!-- 菜单列表  -->
-  <% for (name in theme.menu) { %>
-    <li class="nav-item">
-      <a href="<%- url_for(theme.menu[name]) %>"
-	 class="nav-link opacity-75 shadow ">
-	  <%= name %>
-      </a>
-    </li>
-  <% } %>
-</ul>
+
+<%- partial('_partial/menubar-header') %>

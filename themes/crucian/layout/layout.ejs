@@ -13,40 +13,82 @@
   </head>
   
   <body>
-    <div class="col-lg-8 mx-auto p-3 py-md-5">
+    
+    <div class="col-lg-10 mx-auto p-3 py-md-5">
 
-      <%- partial('_partial/header') %>
-
-      <main>
-	<div class="row">
+      <div class="row">
+	
+	<% if(is_home() == true) { %>
 	  
-	  <div class="col-md-1 ">
+	  <div class="col-md-2 border-end p-4">
 
+	    <div class="row text-center">
+	      <div class="col-12">
+		<img src="<%- url_for('/img/me-03.jpg')%>" class="figure-img img-fluid rounded" alt="...">
+	      </div>
+	      
+	      <div class="col-12 p-3">
+		<h5><%- config.title %></h5>
+	      </div>
+	      
+	      <div class="col-12 p-3 border-top">
+
+		<ul class="nav flex-column">
+		  <!-- 菜单列表  -->
+		  <% for (name in theme.menu) { %>
+		    <li class="nav-item btn btn-sm">
+		      <a href="<%- url_for(theme.menu[name]) %>"
+			 class="nav-link">
+			<%= name %>
+		      </a>
+		    </li>
+		  <% } %>
+		</ul>
+	      </div>
+
+	      <div class="col-12 border-top row-cols-auto p-3">
+		<div class="row">
+		  <a href="https://binglinli.github.io/" class="col fs-5"><i class="bi bi-globe"></i></a>
+		  <a href="https://github.com/binglinli" class="col fs-5"><i class="bi bi-github"></i></a>
+		  <a href="<%- url_for('/atom.xml') %>" class="col fs-5"><i class="bi bi-rss"></i></a>
+		</div>
+	      </div>
+	    </div>
+	    
 	  </div>
+
+	  <div class="col-md-2"></div>
 
 	  <div class="col-md-8">
-	    
-	    <br>
-
-	    <%- partial('_partial/search') %>
-
 	    <%- body %>
-	    
-	    <br>
-	
 	  </div>
 	  
-	  <div class="col-md-3">
+	<% } else { %>
 
-	    <%- partial('_partial/sidebar-left') %>
+	  
+	  <div class="col-lg-9 mx-auto py-md-5">
 	    
+	    <%- partial('_partial/header') %>
+	    
+	    <div class="row">
+	      
+	      <div class="col-md-8">
+		<%- body %>
+	      </div>
+
+	      <div class="col-md-4">
+		<% if (( is_post() == true ) || ( is_page() == true )) { %>
+		  <%- toc(page.content) %>
+		<% } %>
+	      </div>
+	      
+	    </div>
 	  </div>
 	  
-	</div>
-      </main>
-      <div class="row sticky-bottom ">
-	<%- partial('_partial/footer') %>
+	<% } %>
+
       </div>
+      
     </div>
 
 

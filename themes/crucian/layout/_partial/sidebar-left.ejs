@@ -1,3 +1,25 @@
-<div class="fs-6 fw-lighter fst-italic opacity-75 shadow-sm">
-     <%- toc(page.content) %>
-</div>
+
+  <div class="card mb-3">
+    <img src="<%- url_for('/img/me-2.jpg')%>" class="card-img-top" alt="...">
+      <div class="card-body">
+	<h4 class="card-title"><%- config.title %></h4>
+      </div>
+      <p class="card-text p-3">
+	外延决定你是怎样的人
+      </p>
+
+      <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasScrolling" role="button" aria-controls="offcanvasScrolling">
+	菜单
+      </a>
+      
+  </div>
+
+  <% if (is_post() == true) { %>
+    <div class="fst-italic card">
+      <div class="card-body">
+	<h5 class="card-title"><%- %></h5>
+	<p class="card-text"><%- toc(page.content) %></p>
+      </div>
+    </div>
+    <% } %>
+

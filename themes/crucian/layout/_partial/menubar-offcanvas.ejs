@@ -1,0 +1,22 @@
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel"><%- config.title %></h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  
+  <div class="offcanvas-body">
+    <ul class="nav nav-pills">
+      <!-- 菜单列表  -->
+      <% for (name in theme.menu) { %>
+	<li class="nav-item">
+	  <a href="<%- url_for(theme.menu[name]) %>"
+	     class="nav-link opacity-75 shadow ">
+	    <%= name %>
+	  </a>
+	</li>
+      <% } %>
+</ul>
+</div>
+
+</div>

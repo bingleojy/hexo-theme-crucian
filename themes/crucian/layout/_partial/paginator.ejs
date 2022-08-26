@@ -1,28 +1,28 @@
 
-<nav class="pagination d-flex justify-content-middle" aria-label="Page navigation">
+<div class="justify-content-center">
 
     <% if (page.prev || page.next) { %>
 
-      <div class="p-3">
+      <div class="p-3 float-start">
 	<% if (page.prev){ %>
-	  <a href="<%- config.root %><%- page.prev_link %>" class="btn btn-outline-secondary">
+	  <a href="<%- config.root %><%- page.prev_link %>" class="badge p-3 shadow-lg" style="background-color: #a2d7dd">
 	    <%= __('上一页') %>
 	  </a>
 	<% } else { %>
-	  <a class="btn disabled"><%= __('上一页') %></a>
+	  <a class="disabled badge p-3 shadow-lg" style="background-color: #a2d7dd"><%= __('上一页') %></a>
 	<% } %>
       </div>
 
-      <div class="p-3">
+      <div class="p-3 float-end">
 	<% if (page.next){ %>
 	  <a href="<%- config.root %><%- page.next_link %>"
-	     class="btn btn-outline-secondary"><%= __('下一页') %>
+	     class="badge p-3 shadow-lg " style="background-color: #a2d7dd"><%= __('下一页') %>
 	  </a>       
 	<% } else { %>
-	  <a class="btn disabled"><%= __('下一页') %></a>
+	  <a class="disabled badge p-3 shadow-lg " style="background-color: #a2d7dd"><%= __('下一页') %></a>
 	<% } %>
       </div>
       
-    <% }  %>
-  </ul>
-</nav>
+    <% } %>
+  
+</div>

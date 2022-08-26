@@ -1,11 +1,33 @@
-<ul class="nav nav-pills">
-  <!-- 菜单列表  -->
-  <% for (name in theme.menu) { %>
-    <li class="nav-item">
-      <a href="<%- url_for(theme.menu[name]) %>"
-	 class="nav-link">
-	  <%= name %>
-      </a>
-    </li>
-  <% } %>
-</ul>
+<!-- Menu start -->
+<div class=" fixed-top opacity-75">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="h4 shadow" style="color: #a2d7dd"><%- config.title %></h5>
+      <span class="text-muted shadow" style="color: #a2d7dd"><%- config.twisters %></span>
+      <ul class="nav nav-pills justify-content-center">
+	<!-- 菜单列表  -->
+	<% for (name in theme.menu) { %>
+	  <li class="nav-item" style="">
+	    <a href="<%- url_for(theme.menu[name]) %>"
+	       class="nav-link fs-2 mt-3 shadow rounded" style="color: #a2d7dd">
+	      <%= name %>
+	    </a>
+	  </li>
+	<% } %>
+      </ul>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+	      data-bs-target="#navbarToggleExternalContent"
+	      aria-controls="navbarToggleExternalContent"
+	      aria-expanded="false"
+	      aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+</div>
+<!-- Menu end -->

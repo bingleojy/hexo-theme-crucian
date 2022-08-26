@@ -1,28 +1,18 @@
-<div class="p-3 py-md-5">
+<div class="card p-5 rounded-5 shadow-lg mt-3">
   
-  <div  class="container">
+  <div class="card-body">
     
-    <h4><%- page.title %></h4>
-
-    <div class="row">
-      
-      <div class="col">
-	<i class="bi bi-calendar-heart"></i>
+    <h3 class="card-title"><%- page.title %></h3>
+    
+    <span>
+      <i class="bi bi-calendar-heart rounded-pill badge text-white bg-secondary opacity-25">
 	<%- full_date(page.date,'MMMM Do YYYY') %>
-      </div>
-      
-      <div class="col">
-	<i class="bi bi-vector-pen"></i>
-	<a href="<%- config.root %><%= page.path %>"><%= page.author %></a>
-      </div>
-      
-    </div>
+      </i>
+    </span>
     
-  </div>
+    <span class="card-text">
+      <%- page.content%>
+    </span>
 
-  <br>
-  <span>
-    <%- page.content%>
-  </span>
-  
+  </div>
 </div>

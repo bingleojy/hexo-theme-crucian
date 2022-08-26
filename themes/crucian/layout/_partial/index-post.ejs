@@ -1,25 +1,36 @@
 <% page.posts.each(function(item){ %>
-  <div class="mb-3 p-3">
-    
-    <div class="row g-0">
+  <div class="card mb-3 rounded-5 shadow-lg">
+    <div class="card-body">
+
+      <div class="row border-bottom">
+	
+	<div class="col">
+	  <i class="rounded-pill badge text-white bg-secondary opacity-25" ><%- date(item.date.now,) %></i>
+	</div>
+	
+	<div class="row">
+	  <h4 class="p-2 text-center ">
+	    <a class="rounded-pill badge" href="<%- config.root %><%= item.path %>"><%= item.title %></a>
+	  </h4>
+	</div>
+
+	<div class="row row-cols-auto">
+	  <div class="col">
+	    <span><i class="bi bi-layers"><%- item.categories %></i></span>
+	  </div>
+	  <div class="col">
+	    
+	    
+	    <span><i class="bi bi-tag"><%- item.tags %></i></span>
+	  </div>
+	</div>
+	
+      </div>
       
-      <h4><a href="<%- config.root %><%= item.path %>"><%= item.title %></a></h4>
-
-      <div class="row row-cols-auto mb-3">
-	<div class="col">
-	  <i class="bi bi-calendar-heart rwd-small-font-color"><%- full_date(item.date, 'MMMM Do YYYY') %></i>
-	</div>
-
-	<div class="col">
-	  <i class="bi bi-vector-pen rwd-small-font-color"><%= item.author %></i>
-	</div>
+      <div class="mb-3">
+	<%- item.excerpt %>
       </div>
 
     </div>
-    
-    <div class="mb-3 border-bottom">
-      <%- item.excerpt %>
-    </div>
-    
   </div>
 <% }) %>

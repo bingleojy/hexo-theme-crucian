@@ -1,46 +1,3 @@
-*{
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-html {
-  font-size: 1rem;
-}
-
-@include media-breakpoint-up(sm) {
-  html {
-    font-size: 1.2rem;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 1.4rem;
-  }
-}
-
-@include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.6rem;
-  }
-}
-
-body {
-  color: #41555d;
-  font-weight: 450;
-  line-height: 2.0;
-  letter-spacing: +.200em;
-  padding: 70px;
-  background-color: #161823;
-}
-
-div.col-lg-10 {
-  border: 2px solid #c0ebd7;
-  background-color: #f0fcff;
-}
-
-
 $utilities: map-merge(
   $utilities,
   (
@@ -53,35 +10,31 @@ $utilities: map-merge(
   )
 )
 
-p {
-
-}
-
-blockquote{
-  
-}
-
 /* unvisited link */
 a:link {
-  color: #161823;
+  color: #393f4c;
+  background-color: #a2d7dd;
   text-decoration: none;
-  
 }
 
 /* visited link */
 a:visited {
-  color: #161823;
+  color: #393f4c;
+  background-color: #a2d7dd;
   text-decoration: none;
 }
 
 /* mouse over link */
 a:hover {
-  color: #808080;
-  background-color: #d6ecf0;
-  text-decoration: underline;
+  color: #393f4c;
+  background-color: #a2d7dd;
+  text-decoration: none;
+  
 }
 
 /* selected link */
 a:active {
-  color: #c0ebd7;
+  color: #393f4c;
+  background-color: #a2d7dd;
+  text-decoration: none;
 }

@@ -1,19 +1,12 @@
-$utilities: map-merge(
-  $utilities,
-  (
-    "cursor": (
-      property: cursor,
-      class: cursor,
-      responsive: true,
-      values: auto pointer grab,
-    )
-  )
-)
+
+body {
+  background-color: #f0fcff;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
 
 /* unvisited link */
 a:link {
   color: #393f4c;
-  background-color: #a2d7dd;
   text-decoration: none;
 }
 
@@ -26,7 +19,7 @@ a:visited {
 
 /* mouse over link */
 a:hover {
-  color: #393f4c;
+  color: #ffffff;
   background-color: #a2d7dd;
   text-decoration: none;
   
@@ -38,3 +31,50 @@ a:active {
   background-color: #a2d7dd;
   text-decoration: none;
 }
+
+/* 代码高亮样式表 */
+pre code.hljs {
+  white-space: pre;
+  background-color: #d6ecf0;
+}
+
+div.whispers:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* 闲言碎语样式表 */
+div.whispers{
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #e4e7e4;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px 0 rgb(254,249,247), 0 6px 20px 0 rgb(227, 232, 227);
+}
+ 
+
+div.whispers h3{
+
+  
+}
+
+div.list-group h5{
+
+}
+
+div.list-group blockquote{
+  
+}
+
+/* 鼠标样式 */
+$utilities: map-merge(
+  $utilities,
+  (
+    "cursor": (
+      property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    )
+  )
+)

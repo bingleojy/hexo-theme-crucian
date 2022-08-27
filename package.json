@@ -23,6 +23,7 @@
     "hexo-generator-index": "^2.0.0",
     "hexo-generator-tag": "^1.0.0",
     "hexo-recommended-posts": "^1.2.0",
+    "hexo-renderer-babelify": "^0.0.2",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-markdown-it": "^6.0.1",
     "hexo-renderer-stylus": "^2.1.0",
@@ -33,8 +34,5 @@
   "description": "这里是我的个人博客站点",
   "main": "index.js",
   "author": "Binglin Li",
-  "license": "ISC",
-  "devDependencies": {
-    "hexo-html-prettify": "^1.1.3"
-  }
+  "license": "ISC"
 }

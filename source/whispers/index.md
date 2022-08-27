@@ -10,6 +10,10 @@ tags:
 layout: whispers
 ---
 
+
+##### *2022/08/27  21:56"*
+> 增加主题功能： 代码高亮 - 使用[highlight.js](https://www.fenxianglu.cn/highlightjs/)
+
 ##### *2022/08/26  01:20"*
 > 主题自认做得可以上眼了，暂时就不动了
 

@@ -1,7 +1,18 @@
 
 body {
-  background-color: #f0fcff;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+div.col-lg-12{
+    background-color: #f0fcff;
+}
+
+/* 黏住头图在页面最下面 */
+img.posit{
+  position:sticky;
+  left:0px;
+  top:0px;
+  z-index:-1;
 }
 
 /* unvisited link */
@@ -65,6 +76,21 @@ div.list-group h5{
 div.list-group blockquote{
   
 }
+
+/* Aplayer 必须单独，不然不显示播放器 */
+div.aplayer {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 300px;
+}
+
+div.sticky {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 300px;
+}
+
+
 
 /* 鼠标样式 */
 $utilities: map-merge(

@@ -9,7 +9,8 @@ tags:
 - 闲言碎语
 layout: whispers
 ---
-
+##### *2022/08/31  21:54"*
+> 增加主题功能： 全局音乐播放器，站内跳转不中断播放 - 使用[Aplayer](https://aplayer.js.org/#/zh-Hans/)
 
 ##### *2022/08/27  21:56"*
 > 增加主题功能： 代码高亮 - 使用[highlight.js](https://www.fenxianglu.cn/highlightjs/)

@@ -1,0 +1,39 @@
+<!-- Aplayer 和脚本必须放一起不然加载不了 -->
+<div id="aplayer"></div>
+<script type="text/javascript">
+ const ap = new APlayer({
+   container: document.getElementById('aplayer'),
+   autoplay: true,
+   loop: 'all',
+   order: 'random',
+   preload: 'auto',
+   volume: 0.7,
+   mutex: true,
+   audio: [{
+     name: '一生所爱',
+     artist: '电影《大话西游》插曲',
+     url: 'https://music.163.com/song/media/outer/url?id=25707139',
+     cover: '<%- url_for('/img/bg-07.jpg') %>'
+   },{
+     name: '挪威的森林',
+     artist: '爱情的尽头',
+     url: 'https://music.163.com/song/media/outer/url?id=157288',
+     cover: '<%- url_for('/img/bg-07.jpg') %>'
+   },{
+     name: '此生不换',
+     artist: '电视剧《仙剑奇侠传三》插曲',
+     url: 'https://music.163.com/song/media/outer/url?id=25638340',
+     cover: '<%- url_for('/img/bg-07.jpg') %>'
+   },{
+     name: '偏爱',
+     artist: '电视剧《仙剑奇侠传三》插曲',
+     url: 'https://music.163.com/song/media/outer/url?id=5238992',
+     cover: '<%- url_for('/img/bg-07.jpg') %>'
+   },{
+     name: '逍遥叹',
+     artist: '电视剧《仙剑奇侠传三》插曲',
+     url: 'https://music.163.com/song/media/outer/url?id=1383023012',
+     cover: '<%- url_for('/img/bg-07.jpg') %>'
+   }]
+ });
+</script>

@@ -17,6 +17,33 @@
       integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"
+      integrity="sha512-CIYsJUa3pr1eoXlZFroEI0mq0UIMUqNouNinjpCkSWo3Bx5NRlQ0OuC6DtEB/bDqUWnzXc1gs2X/g52l36N5iw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"
+	integrity="sha512-RWosNnDNw8FxHibJqdFRySIswOUgYhFxnmYO3fp+BgCU7gfo4z0oS7mYFBvaa8qu+axY39BmQOrhW3Tp70XbaQ=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer">
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"
+	integrity="sha256-lOUP+l9qLbMTaCYKLNdL6sBZF+8JZrFxXmXrVbzSgj0="
+	crossorigin="anonymous">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+	integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer">
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"
+	integrity="sha512-7G7ueVi8m7Ldo2APeWMCoGjs4EjXDhJ20DrPglDQqy8fnxsFQZeJNtuQlTT0xoBQJzWRFp4+ikyMdzDOcW36kQ=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer">
+</script>
 
 <!-- Favicons
 <link rel="apple-touch-icon"
@@ -38,4 +65,17 @@
 <link rel="icon"
       href="<%- url_for('/img/favicons/favicon.ico')%>">
 -->
+
+<!-- Custom styles for this template -->
+<link href="<%- url_for('/css/style.css')%>" rel="stylesheet">
+<link href="<%- url_for('/js/hljs.me.js')%>" rel="stylesheet">
+
+<script>
+  // 对所有链接跳转事件绑定pjax容器pjax-container, 不能放在JS文件里面,否则不起作用
+  $(document).pjax('a', '#pjax-container', {
+    fragment:'#pjax-container'
+    });   
+</script>  
+
+
 

@@ -29,6 +29,8 @@ tags:
 HTML:
 
 * [HTML5 Sec](https://html5sec.org/) -
+* [haml](https://haml.info/) - Ruby/Rails项目可以用这个HTML模板
+* [Emmet](https://emmet.io/) - HTML模板
 
 CSS
 

@@ -8,10 +8,6 @@
 
     <%- partial('_partial/top-link') %>
 
-    <!-- Custom styles for this template -->
-    <link href="<%- url_for('/css/style.css')%>" rel="stylesheet">
-    <link href="<%- url_for('/js/hljs.me.js')%>" rel="stylesheet">
-
   </head>
 
   <body>
@@ -21,14 +17,18 @@
     <div class="col-lg-12 mx-auto p-3">
       
       <div class="row">
+	
 	<div class="col-md-3">
+	  <%- partial('_partial/aplayer') %>
 	</div>
-	<div class="col-md-6">
+	
+	<div class="col-md-6 " id="pjax-container">
 	  <%- body %>
 	</div>
-	<div class="col-md-3">
+	
+	<div class="col-md-3" id="pjax-container">
 	  <% if (is_post()) { %>
-	    <div class="card w-75 mt-3 mb-3 rounded-5 shadow-lg p-3">
+	    <div class="card w-75 mt-3 mb-3 rounded-5 shadow-lg p-3 sticky">
 	      <%- toc(page.content) %>
 	    </div>
 	  <% } %>
@@ -39,6 +39,5 @@
 
     </div>
     <%- partial('_partial/after-link') %>
-
   </body>
 </html>

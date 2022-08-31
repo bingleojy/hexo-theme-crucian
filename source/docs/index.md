@@ -35,9 +35,11 @@ HTML:
 CSS
 
 JavaScript
-* [NodeJs](http://nodejs.cn/) - Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时
-* [Express](http://expressjs.jser.us/) - Express 是一个简洁而灵活的 node.js Web应用框架
+* [NodeJs](http://nodejs.cn/) - 是一个基于 Chrome V8 引擎的 JavaScript 运行时
+* [Express](http://expressjs.jser.us/) - 是一个简洁而灵活的 node.js Web应用框架
 * [highlight.js](https://www.fenxianglu.cn/highlightjs/) - Web 的语法突出显示
+* [JQuery](https://jquery.com/) - 是一个快速、小型且功能丰富的 JavaScript 库。
+* [JQuery-PJAX](https://pjax.herokuapp.com/) - 是一个 jQuery 插件，它通过 ajax 和 pushState 技术提供了极速的（无刷新 ajax 加载）浏览体验
 
 
 ### 很好的文档站
